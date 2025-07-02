@@ -15,6 +15,7 @@ const App = () => {
     try {
       setLoading(true);
 const response = await axios.get(`/api/news?category=${category}');
+  
   setArticles(response.data.articles);
     } catch (err) {
       setError('Failed to load news.');
